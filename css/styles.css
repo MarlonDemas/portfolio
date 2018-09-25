@@ -1,0 +1,365 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Serif KR', sans-serif;
+}
+
+header {
+    background: cadetblue;
+    margin-top: 45px;
+}
+
+header h1, h2 {
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+header p {
+    display: block;
+    width: 30%;
+    margin: auto;
+    padding-bottom: 10px;
+    visibility: hidden;
+}
+
+header:hover p {
+    visibility: visible;
+}
+
+#myImage {
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    border-radius: 50%;
+    width: 15%;
+    height: 30%;
+    transition: transform 1.5s;
+}
+
+#myImage:hover {
+    transform: scaleX(-1);
+}
+
+.btn {
+    background-color: cadetblue;
+    border: none;
+    color: black;
+    padding: 12px 30px;
+    cursor: pointer;
+    font-size: 20px;
+    position: absolute;
+    top: 30%;
+    right: 5%;
+  }
+
+  .btn:hover {
+    background-color: black;
+    color: cadetblue;
+  }
+
+#navBar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: url(../img/nav5.jpg);
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 98.9%;
+}
+
+#navBar li {
+    float: left;
+    padding: 10px 9%;
+}
+
+#navBar li a {
+    display: block;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+#navBar li:hover{
+    background-color: black;
+
+}
+#navBar li:hover a{
+    color: cadetblue;
+}
+
+main{
+    display: table;
+    margin: 5% 5%;
+}
+
+main h2 {
+    background-color: cadetblue;
+}
+
+#education {
+    display: table;
+}
+
+.tertiary {
+    display: block;
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+}
+
+.secondary {
+    display: block;
+    width: 30%;
+    margin: auto;
+
+}
+
+.experience {
+    display: table;
+    margin-bottom: 5%;
+}
+
+.work {
+    display: block;
+    width: 30%;
+    float: left;
+    margin-right: 3%;
+}
+
+#skills li {
+    list-style: none;
+    display: inline;
+}
+
+#skills img {
+    width: 5%;
+    height: 5%;
+    margin: 50px 5% 50px 0;
+    transition: transform 2s, box-shadow 2s;
+}
+
+#skills img:hover {
+    transform: rotate(360deg);
+    box-shadow: 15px 15px 15px black; 
+}
+
+.hobbies {
+    padding: 5px 5%;
+}
+
+.hobbies li {
+    list-style: none;
+    padding: 5px 0;
+}
+
+.colorItem {
+    background-color: cadetblue;
+}
+
+.hobbies:hover .colorItem{
+    background-color: white;
+}
+
+.hobbies:hover .otherItem{
+    background-color: cadetblue;
+}
+
+footer {
+    text-align: center;
+    background-color: cadetblue;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+    padding: 0 25px 20px;
+    transition: 1s;
+}
+
+footer img:hover {
+    transform: scale(1.7);
+}
+
+footer a {
+    visibility: hidden;
+}
+
+footer:hover a {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 1280px) {
+    #navBar li {
+        float: left;
+        padding: 10px 8%;
+    }
+}
+
+@media only screen and (max-width: 994px) {
+    #navBar li {
+        float: left;
+        padding: 10px 7%;
+    }
+}
+
+@media only screen and (max-width: 822px) {
+    #navBar li {
+        float: left;
+        padding: 10px 6%;
+    }
+
+    header p {
+        width: 40%;
+        margin: auto;
+        margin-left: 30%;
+        padding-bottom: 10px;
+        visibility: visible;
+    }
+
+    header h1, h2 {
+        display: block;
+        width: 30%;
+        margin-left: 30%;
+    }
+}
+
+@media only screen and (max-width: 690px) {
+    #navBar li {
+        float: left;
+        padding: 10px 5%;
+    }
+
+    header p {
+        width: 40%;
+        margin: auto;
+        margin-left: 30%;
+        padding-bottom: 10px;
+        visibility: visible;
+    }
+
+    header h1, h2 {
+        display: block;
+        width: 35%;
+        margin-left: 30%;
+    }
+
+    .tertiary {
+        float: none;
+        margin: auto;
+        width: 40%;
+    }
+
+    .work {
+        float: none;
+        margin: auto;
+        width: 40%;
+    }
+
+    .secondary {
+        width: 40%;
+    }
+
+    h3 {
+        text-align: center;
+    }
+
+    #skills li {
+        display: block;
+        margin-left: 40%;
+        width: 550px;
+    }
+
+    .hobbies {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    
+    #navBar ul {
+        width: 150px;
+        position: fixed;
+        z-index: 1;
+        top: 20px;
+        left: 10px;
+        background: #eee;
+        overflow-x: hidden;
+        padding: 8px 0;
+    }
+    
+    #navBar li a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #2196F3;
+        display: block;
+    }
+    
+    #navBar li a:hover {
+        color: #064579;
+    }
+
+    .btn {
+        display: none;
+      }
+
+      header p {
+        width: 40%;
+        margin: auto;
+        margin-left: 40%;
+        padding-bottom: 10px;
+        visibility: visible;
+    }
+
+    #myImage {
+        display: none;
+    }
+
+    header {
+        margin: 0;
+    }
+
+    header h1, h2 {
+        display: block;
+        width: 30%;
+        margin-left: 40%;
+    }
+
+    .tertiary {
+        margin-left: 25%;
+    }
+
+    .work {
+        margin-left: 25%
+    }
+
+    .secondary {
+        margin-left: 25%;
+    }
+
+    h3 {
+        margin-left: 25%
+    }
+
+    #skills li {
+        margin-left: 30%;
+    }
+
+    .hobbies {
+        display: block;
+        float: left;
+        text-align: justify;
+        margin-left: 20%;
+    }
+
+    footer h2{
+        margin-left: 150px;
+    }
+}
+
