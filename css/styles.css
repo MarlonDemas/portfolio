@@ -201,14 +201,14 @@ footer:hover a {
     }
 }
 
-@media only screen and (max-width: 994px) {
+@media only screen and (max-width: 1011px) {
     #navBar li {
         float: left;
         padding: 10px 7%;
     }
 }
 
-@media only screen and (max-width: 822px) {
+@media only screen and (max-width: 831px) {
     #navBar li {
         float: left;
         padding: 10px 6%;
@@ -229,7 +229,7 @@ footer:hover a {
     }
 }
 
-@media only screen and (max-width: 690px) {
+@media only screen and (max-width: 713px) {
     #navBar li {
         float: left;
         padding: 10px 5%;
@@ -280,7 +280,7 @@ footer:hover a {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 613px) {
     
     #navBar ul {
         width: 150px;
