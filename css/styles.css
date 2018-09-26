@@ -233,7 +233,7 @@ footer:hover a {
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
     header p {
-        width: 70%;
+        width: 60%;
         margin: auto;
         margin-left: 40%;
         padding-bottom: 10px;
@@ -273,21 +273,61 @@ footer:hover a {
 
     .btn {
         display: none;
-      }
+    }
 
-      main {
-          display: block;
-      }
+    main {
+        /* display: block; */
+    }
 
-      #education {
-          display: block;
-          float: none;
-          margin-left: 40%;
-      }
+    #education {
+        display: block;
+        float: none;
+        margin-left: 40%;
+    }
 
-      .tertiary {
-          float: none;
-          width: 90%;
-      }
+    .tertiary {
+        float: none;
+        width: 90%;
+    }
+
+    .secondary {
+        float: none;
+        margin-left: 40%;
+        width: 60%;
+    }
+
+    .experience {
+        display: block;
+        float: none;
+        margin-left: 40%;
+    }
+
+    .work {
+        float: none;
+        width: 90%;
+    }
+      
+    #skills li {
+        /* display: block; */
+        margin-left: 40%;
+    }
+
+    #skills li img {
+        width: 50px;
+    }
+
+    .hobbies li {
+        /* display: block; */
+        margin-left: 40%;
+    }
+
+    .hobbies li img {
+        width: 50px;
+    }
+
+    nav h2 {
+        width: 60%;
+        margin-left: 40%;
+    }
 
 }
