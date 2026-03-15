@@ -552,6 +552,17 @@ select {
   box-shadow: 0 0 32px rgba(255, 132, 0, 0.18), 0 0 80px rgba(255, 132, 0, 0.06);
 }
 
+/* ─── Perspective Card ─── */
+
+.perspective-card {
+  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg);
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.perspective-card:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+}
+
 /* Horizontal project card — needs visible base background */
 .project-card {
   background: var(--surface-2);

@@ -2,41 +2,30 @@ import { Link } from 'react-router-dom'
 
 export function Footer({
   copy,
-  links,
 }: {
   copy: string
   links: Array<{ label: string; href: string; external: boolean }>
 }) {
   return (
-    <footer className="border-t border-[var(--border-strong)] bg-[var(--surface-1)]">
-      <div className="section-shell flex min-h-[72px] flex-col justify-center gap-4 py-5 text-center md:flex-row md:items-center md:justify-between md:text-left">
-        <p className="text-sm text-[var(--text-muted)]">{copy}</p>
-        <div className="flex flex-wrap items-center justify-center gap-6 md:justify-end">
-          {links.map((link) =>
-            link.external ? (
-              <a
-                className={`text-sm transition-colors duration-200 ${
-                  link.label.startsWith('Back')
-                    ? 'mono-heading font-semibold text-[var(--neon-blue)]'
-                    : 'text-[var(--text-secondary)] hover:text-[var(--text-primary)]'
-                }`}
-                href={link.href}
-                key={link.label}
-                rel="noreferrer"
-                target="_blank"
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                className="mono-heading text-sm font-semibold text-[var(--neon-blue)]"
-                key={link.label}
-                to={link.href}
-              >
-                {link.label}
-              </Link>
-            ),
-          )}
+    <footer className="border-t border-white/5 bg-[#050508] py-12">
+      <div className="section-shell flex flex-col items-center gap-8 text-center md:flex-row md:justify-between md:text-left">
+        <div>
+          <Link
+            className="mono-heading text-xl font-bold tracking-widest text-[var(--neon-blue)]"
+            to="/"
+          >
+            MD
+          </Link>
+          <p className="mt-2 max-w-sm text-sm text-slate-500">
+            Senior Engineer architecting high-performance digital ecosystems with purpose.
+          </p>
+        </div>
+
+        <div className="md:text-right">
+          <p className="mono-heading text-xs uppercase tracking-widest text-slate-400">
+            Built with React, TypeScript & Tailwind
+          </p>
+          <p className="mt-1 text-[10px] text-slate-600">{copy}</p>
         </div>
       </div>
     </footer>
