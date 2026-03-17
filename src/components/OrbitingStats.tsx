@@ -34,7 +34,7 @@ export function OrbitingStats({ stats }: OrbitingStatsProps) {
                 >
                   {stat.value}
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-400">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-slate-300">
                   {stat.label}
                 </span>
               </div>

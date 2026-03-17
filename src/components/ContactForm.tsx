@@ -31,7 +31,7 @@ export function ContactForm() {
       <div className="glass-panel w-full max-w-[520px] rounded-[24px] p-10 text-center">
         <div className="mb-4 text-4xl">✓</div>
         <h3 className="mono-heading mb-3 text-xl font-bold text-white">Message sent!</h3>
-        <p className="text-slate-400">I'll get back to you within a couple of days.</p>
+        <p className="text-slate-300">I'll get back to you within a couple of days.</p>
       </div>
     )
   }
@@ -43,7 +43,7 @@ export function ContactForm() {
     >
       <div className="grid gap-5 sm:grid-cols-2">
         <div className="flex flex-col gap-2">
-          <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-400" htmlFor="name">
+          <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-300" htmlFor="name">
             Name
           </label>
           <input
@@ -57,7 +57,7 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-2">
-          <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-400" htmlFor="email">
+          <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-300" htmlFor="email">
             Email
           </label>
           <input
@@ -72,7 +72,7 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-400" htmlFor="enquiry">
+        <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-300" htmlFor="enquiry">
           Enquiry type
         </label>
         <select
@@ -89,7 +89,7 @@ export function ContactForm() {
       </div>
 
       <div className="flex flex-col gap-2">
-        <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-400" htmlFor="message">
+        <label className="mono-heading text-[10px] font-bold uppercase tracking-widest text-slate-300" htmlFor="message">
           Message
         </label>
         <textarea
