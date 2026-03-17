@@ -20,15 +20,15 @@ export const heroCtas: CtaLink[] = [
 
 export const contactCta: CtaLink = {
   label: 'Say Hello',
-  href: 'mailto:hello@marlondemas.dev',
+  href: 'mailto:marlon@specno.com',
   kind: 'primary',
 }
 
 export const contactLinks: ContactLink[] = [
   {
     kind: 'email',
-    label: 'hello@marlondemas.dev',
-    href: 'mailto:hello@marlondemas.dev',
+    label: 'marlon@specno.com',
+    href: 'mailto:marlon@specno.com',
     icon: 'mail',
   },
   {

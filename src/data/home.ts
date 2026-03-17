@@ -52,11 +52,6 @@ export const quickFacts: QuickFact[] = [
     label: 'Based in Cape Town, South Africa',
   },
   {
-    icon: 'globe',
-    accent: 'cyan',
-    label: 'Open to remote · UTC+2',
-  },
-  {
     icon: 'users',
     accent: 'purple',
     label: 'Mentoring & team leadership',
