@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://marlondemas.dev/sitemap.xml
+Sitemap: https://demasmarlon.netlify.app/sitemap.xml
