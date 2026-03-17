@@ -32,6 +32,20 @@ function ScrollManager() {
   return null
 }
 
+function NotFound() {
+  return (
+    <div className="page-shell flex min-h-screen items-center justify-center">
+      <div className="text-center">
+        <h1 className="mono-heading mb-4 text-6xl font-bold text-white">404</h1>
+        <p className="mb-8 text-slate-300">Page not found.</p>
+        <a className="text-sm font-semibold text-[var(--neon-cyan)] hover:text-white" href="/">
+          ← Back to home
+        </a>
+      </div>
+    </div>
+  )
+}
+
 export function App() {
   return (
     <MotionConfig reducedMotion="user">
@@ -43,6 +57,7 @@ export function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
     </MotionConfig>

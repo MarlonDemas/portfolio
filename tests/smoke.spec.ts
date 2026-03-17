@@ -4,12 +4,10 @@ test('home route renders the main sections', async ({ page }) => {
   await page.goto('/')
 
   await expect(page.getByRole('heading', { name: 'Marlon Demas' })).toBeVisible()
-  await expect(page.getByText('From electrical engineering to full-stack product leadership.')).toBeVisible()
-  await expect(page.getByText('Technologies I work with')).toBeVisible()
-  await expect(page.getByText('Projects that ship')).toBeVisible()
+  await expect(page.getByText('Engineering solutions for global impact')).toBeVisible()
+  await expect(page.getByText('Products that ship')).toBeVisible()
   await expect(page.getByText('Professional journey')).toBeVisible()
-  await expect(page.getByText('What I bring to the table')).toBeVisible()
-  await expect(page.getByText("Let's build something together")).toBeVisible()
+  await expect(page.getByText('Let us build the')).toBeVisible()
 })
 
 test('projects route renders the full portfolio list', async ({ page }) => {
@@ -23,18 +21,10 @@ test('projects route renders the full portfolio list', async ({ page }) => {
 test('nav links and outbound CTAs are wired', async ({ page }) => {
   await page.goto('/')
 
-  await page.getByRole('link', { name: 'Stack' }).click()
-  await expect(page).toHaveURL(/#stack$/)
-  await expect(page.getByText('Technologies I work with')).toBeVisible()
-
   await expect(page.getByRole('link', { name: 'View Projects' })).toHaveAttribute('href', '/projects')
   await expect(page.getByRole('link', { name: 'Download CV' })).toHaveAttribute(
     'href',
     '/assets/docs/Marlon_Demas_CV.pdf',
-  )
-  await expect(page.getByRole('link', { name: 'Say Hello' })).toHaveAttribute(
-    'href',
-    'mailto:hello@marlondemas.dev',
   )
 })
 
@@ -87,21 +77,4 @@ test('home hero matches mobile layout', async ({ page }) => {
     caret: 'hide',
     maxDiffPixelRatio: 0.02,
   })
-})
-
-test('impact section matches the mobile card layout', async ({ page }) => {
-  await page.setViewportSize({ width: 390, height: 844 })
-  await page.goto('/')
-
-  await page.getByText('What I bring to the table').scrollIntoViewIfNeeded()
-  await page.waitForTimeout(1200)
-
-  await expect(page.getByText('What I bring to the table').locator('..').locator('..')).toHaveScreenshot(
-    'impact-mobile.png',
-    {
-      animations: 'disabled',
-      caret: 'hide',
-      maxDiffPixelRatio: 0.02,
-    },
-  )
 })

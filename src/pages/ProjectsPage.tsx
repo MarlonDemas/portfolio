@@ -61,22 +61,32 @@ export function ProjectsPage() {
             {/* Project list */}
             <div className="flex flex-col gap-8" data-testid="projects-list">
               <AnimatePresence mode="popLayout">
-                {filtered.map((project, i) => (
-                  <motion.div
-                    key={project.slug}
-                    layout
-                    initial={{ opacity: 0, y: 16 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: -8 }}
-                    transition={{
-                      duration: motionTokens.durations.reveal,
-                      ease: motionTokens.easing.out,
-                      delay: i < 4 ? i * 0.05 : 0,
-                    }}
+                {filtered.length === 0 ? (
+                  <motion.p
+                    className="py-16 text-center text-slate-300"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
                   >
-                    <ProjectCard project={project} />
-                  </motion.div>
-                ))}
+                    No projects match this filter.
+                  </motion.p>
+                ) : (
+                  filtered.map((project, i) => (
+                    <motion.div
+                      key={project.slug}
+                      layout
+                      initial={{ opacity: 0, y: 16 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -8 }}
+                      transition={{
+                        duration: motionTokens.durations.reveal,
+                        ease: motionTokens.easing.out,
+                        delay: i < 4 ? i * 0.05 : 0,
+                      }}
+                    >
+                      <ProjectCard project={project} />
+                    </motion.div>
+                  ))
+                )}
               </AnimatePresence>
             </div>
           </div>

@@ -1,14 +1,5 @@
+import { accentText } from '../data/accents'
 import type { AccentName } from '../types/content'
-
-const accentText: Record<AccentName, string> = {
-  blue: 'text-[var(--neon-blue)]',
-  cyan: 'text-[var(--neon-cyan)]',
-  green: 'text-[var(--neon-green)]',
-  purple: 'text-[var(--neon-purple)]',
-  yellow: 'text-[var(--neon-yellow)]',
-  red: 'text-[var(--signal-red)]',
-  orange: 'text-[var(--cta-orange)]',
-}
 
 export function SectionHeading({
   accent,

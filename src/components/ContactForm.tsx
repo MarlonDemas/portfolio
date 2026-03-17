@@ -105,7 +105,7 @@ export function ContactForm() {
       {status === 'error' && (
         <p className="text-xs text-red-400">
           Something went wrong — try again or{' '}
-          <a className="underline hover:text-red-300" href="mailto:hello@marlondemas.dev">
+          <a className="underline hover:text-red-300" href="mailto:marlon@specno.com">
             email directly
           </a>
           .
