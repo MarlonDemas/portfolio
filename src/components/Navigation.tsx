@@ -9,7 +9,7 @@ import type { NavItem } from '../types/content'
 export function Navigation({
   items,
   ctaHref,
-  ctaLabel = 'Back To You',
+  ctaLabel = 'Get In Touch',
 }: {
   items: NavItem[]
   ctaHref: string
@@ -154,7 +154,7 @@ export function Navigation({
               <div className="border-t border-[var(--border-glass)] p-6">
                 <div onClick={close}>
                   <ButtonLink className="w-full justify-center" href={ctaHref} kind="primary">
-                    Back To You
+                    Get In Touch
                   </ButtonLink>
                 </div>
               </div>

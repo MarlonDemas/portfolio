@@ -20,9 +20,11 @@ export function ProjectCard({
     >
       <div className="bento-glow-overlay" style={{ backgroundColor: accentVar[project.accent] }} />
       <div className={compact ? 'project-card-grid--compact' : 'project-card-grid'}>
-        <div
+        <img
+          alt={`${project.name} project screenshot`}
           className={`project-card-image ${compact ? '' : 'project-card-image--full'}`}
-          style={{ backgroundImage: `url(${project.image})` }}
+          loading="lazy"
+          src={project.image}
         />
         <div className={`${compact ? 'p-6' : 'p-8'} flex flex-col gap-4`}>
           <div className="flex items-center gap-2">

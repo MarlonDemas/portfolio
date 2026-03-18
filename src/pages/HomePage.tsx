@@ -136,9 +136,11 @@ export function HomePage() {
                 <div className="flex h-full flex-col gap-8 pt-40">
                   <div className="bento-card group relative min-h-[380px] overflow-hidden">
                     <div className="absolute inset-0 bg-slate-900">
-                      <div
-                        className="absolute inset-0 bg-cover bg-center"
-                        style={{ backgroundImage: `url(${aboutCopy.photo})`, backgroundPosition: 'top' }}
+                      <img
+                        alt="Marlon Demas in Cape Town, South Africa"
+                        className="absolute inset-0 h-full w-full object-cover object-top"
+                        loading="lazy"
+                        src={aboutCopy.photo}
                       />
                     </div>
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-transparent" />

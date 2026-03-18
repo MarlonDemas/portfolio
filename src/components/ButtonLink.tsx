@@ -33,10 +33,10 @@ export function ButtonLink({
     return (
       <a
         className={classes}
-        download={download}
+        download={download || undefined}
         href={href}
-        rel={external ? 'noreferrer' : undefined}
-        target={external ? '_blank' : undefined}
+        rel={download || external ? 'noreferrer' : undefined}
+        target={download || external ? '_blank' : undefined}
       >
         {children}
       </a>

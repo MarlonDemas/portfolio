@@ -28,7 +28,7 @@ export const tickerItems = [
 
 export const aboutStats: AboutStat[] = [
   { value: '7+', label: 'Years' },
-  { value: '15+', label: 'Products' },
+  { value: '20+', label: 'Products' },
   { value: '60k+', label: 'Users' },
 ]
 

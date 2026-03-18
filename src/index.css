@@ -214,13 +214,15 @@ select {
 
 .project-card-image {
   min-height: 200px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
 }
 
 .project-card-image--full {
   min-height: 100%;
+  height: 100%;
 }
 
 .tech-icon-wrap {

@@ -1,11 +1,14 @@
-import { useEffect } from 'react'
+import { lazy, Suspense, useEffect } from 'react'
 import { MotionConfig } from 'motion/react'
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom'
 import { AuroraBackground } from './components/AuroraBackground'
 import { GrainOverlay } from './components/GrainOverlay'
 import { ScrollProgress } from './components/ScrollProgress'
 import { HomePage } from './pages/HomePage'
-import { ProjectsPage } from './pages/ProjectsPage'
+
+const ProjectsPage = lazy(() =>
+  import('./pages/ProjectsPage').then((m) => ({ default: m.ProjectsPage }))
+)
 
 function ScrollManager() {
   const location = useLocation()
@@ -56,7 +59,7 @@ export function App() {
       <ScrollManager />
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/projects" element={<ProjectsPage />} />
+        <Route path="/projects" element={<Suspense fallback={null}><ProjectsPage /></Suspense>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </BrowserRouter>
